@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.example.android.justjava.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    int scoreA = 0;
-    int scoreB = 0;
-    String text;
+    int quantity = 0;
+    int price =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,62 +22,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        binding.tv1pA.setOnClickListener(new View.OnClickListener() {
+        binding.btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreA = scoreA +1;
-                displayA(scoreA);
+                quantity = quantity - 1;
+                displayQuantity(quantity);
             }
         });
 
-        binding.tv2pA.setOnClickListener(new View.OnClickListener() {
+        binding.btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreA = scoreA +2;
-                displayA(scoreA);
+                quantity = quantity +1;
+                displayQuantity(quantity);
             }
         });
 
-        binding.tv3pA.setOnClickListener(new View.OnClickListener() {
+        binding.btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                scoreA = scoreA +3;
-                displayA(scoreA);
-            }
-        });
-
-        binding.tvReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayB(0);
-                displayA(0);
-            }
-        });
-
-        binding.tv1pB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreB = scoreB + 1;
-                displayB(scoreB);
-
-            }
-        });
-
-        binding.tv2pB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreB = scoreB + 2;
-                displayB(scoreB);
-
-            }
-        });
-
-        binding.tv3pB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scoreB = scoreB + 3;
-                displayB(scoreB);
-
+                CheckBox whippedCream = binding.cbCream;
+                int price = calculatePrice();
+                boolean hasWhippedCream = whippedCream.isChecked();
+                String message= displayMsg (price, hasWhippedCream);
+                displaySummary(message);
             }
         });
 
@@ -85,12 +53,25 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void displayA (int number){
-        binding.tvScoreA.setText("" + number);
+    private void displayQuantity (int number){
+        binding.tvNumber.setText("" + number);
     }
 
-    private void displayB (int number){
-        binding.tvScoreB.setText("" + number);
+    private void displaySummary (String text){
+        binding.tvDisplaySummary.setText("" + text);
+    }
+
+    private String displayMsg (int price, boolean hasCream){
+       String msg = "Name: Lyla";
+        msg+= "\nAdd cream? " + hasCream;
+        msg+= "\nQuantity: " + quantity;
+        msg+= "\nTotal: " + price;
+        msg+= "\nThanks";
+        return msg;
+    }
+
+    private int calculatePrice (){
+        return price = quantity *5 ;
     }
 
 

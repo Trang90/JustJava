@@ -10,156 +10,118 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <LinearLayout
+
+
+        <TextView
+            android:id="@+id/tv_topping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_teamA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team A"
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:textSize="24sp"
-                android:textColor="#616161"
-                android:fontFamily="sans-serif-medium"/>
-
-            <TextView
-                android:id="@+id/tv_scoreA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:layout_marginBottom="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="sans-serif-light"/>
-
-            <Button
-                android:id="@+id/tv_3pA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+3 Points"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-            <Button
-                android:id="@+id/tv_2pA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+2 Points"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-            <Button
-                android:id="@+id/tv_1pA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+1 Points"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:text="Topping"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif-medium"
             />
 
+        <CheckBox
+            android:id="@+id/cb_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped cream"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="16dp"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            >
 
-            <TextView
-                android:id="@+id/tv_teamB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team B"
-                android:layout_marginTop="16dp"
+            <Button
+                android:id="@+id/btn_plus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
                 android:layout_gravity="center"
-                android:textSize="24sp"
-                android:textColor="#616161"
-                android:fontFamily="sans-serif-medium"/>
+                android:layout_marginBottom="8dp"
+                />
 
             <TextView
-                android:id="@+id/tv_scoreB"
+                android:id="@+id/tv_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:layout_marginBottom="24dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_gravity="center"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="20sp"
+                android:textColor="#616161"
+                android:fontFamily="sans-serif-medium"
+                />
 
             <Button
-                android:id="@+id/tv_3pB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+3 Points"
+                android:id="@+id/btn_minus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
                 android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-            <Button
-                android:id="@+id/tv_2pB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+2 Points"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-            <Button
-                android:id="@+id/tv_1pB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+1 Points"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_gravity="center"/>
-
-
+                />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/tv_displaySummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif-medium"/>
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            />
 
     </LinearLayout>
 
-
-
-    <Button
-        android:id="@+id/tv_Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_gravity="center"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
