@@ -16,6 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/edittext_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
 
 
         <TextView
@@ -38,6 +49,14 @@
             android:layout_marginStart="16dp"
             android:textSize="20sp"/>
 
+        <CheckBox
+            android:id="@+id/cb_chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
+            android:layout_marginStart="16dp"
+            android:textSize="20sp"/>
+
         <TextView
             android:id="@+id/tv_quantity"
             android:layout_width="wrap_content"
@@ -55,6 +74,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
             >
 
             <Button
@@ -62,30 +82,25 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:text="+"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
                 />
 
             <TextView
                 android:id="@+id/tv_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
-                />
+                android:text="0"
+                android:textColor="#616161"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_minus"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:text="-"
-                android:layout_marginBottom="8dp"
                 />
         </LinearLayout>
 
