@@ -14,18 +14,27 @@
         android:background="@color/tan_background"
         android:padding="16dp">
 
-
-    <TextView
-        android:id="@+id/miwok_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="eins"/>
-
         <TextView
-            android:id="@+id/defaut_tv"
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="one"/>
+            android:background="@color/category_numbers"
+            android:text="@string/category_numbers" />
+
+        <TextView
+            android:id="@+id/tv_english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_family"
+            android:text="@string/category_family" />
+
+        <TextView
+            android:id="@+id/tv_math"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_colors"
+            android:text="@string/category_colors" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

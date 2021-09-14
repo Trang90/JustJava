@@ -2,18 +2,9 @@ package com.example.android.justjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.Toast;
-
-import com.example.android.justjava.color.ColorActivity;
 import com.example.android.justjava.databinding.ActivityMainBinding;
-import com.example.android.justjava.family.FamilyActivity;
-
-import java.text.NumberFormat;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,40 +18,17 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.numbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), NumberActivity.class);
-                startActivity(intent);
-            }
-        });
+        ArrayList<ReportCard> cards = new ArrayList<>();
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
 
-        binding.colors.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(), ColorActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        binding.family.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FamilyActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        binding.phrases.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), PhrasesActivity.class);
-                startActivity(intent);
-            }
-        });
+        ReportCardAdapter adapter = new ReportCardAdapter(this, cards);
+        binding.numberGridView.setAdapter(adapter);
             }
 
 //    public void openNumberLists (View view) {

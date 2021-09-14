@@ -22,14 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JustJava">
         <activity
-            android:name=".NumberActivity"
-            android:label="@string/category_numbers"
-            android:exported="true" />
-        <activity
-            android:name=".PhrasesActivity"
-            android:label="@string/category_phrases"
-            android:exported="true" />
-        <activity
             android:name=".color.ColorActivity"
             android:exported="true"
             android:label="@string/category_colors"
