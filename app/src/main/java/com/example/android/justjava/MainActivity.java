@@ -19,17 +19,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ArrayList<ReportCard> cards = new ArrayList<>();
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
-        cards.add(new ReportCard("Name: Trang", "English grade: A+", "Math grade: A"));
+
 
         ReportCardAdapter adapter = new ReportCardAdapter(this, cards);
         binding.numberGridView.setAdapter(adapter);
             }
+
 
 //    public void openNumberLists (View view) {
 //

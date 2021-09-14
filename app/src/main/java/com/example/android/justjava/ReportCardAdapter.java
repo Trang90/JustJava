@@ -31,13 +31,14 @@ public class ReportCardAdapter extends ArrayAdapter<ReportCard> {
             reportName.setText(currentReport.getmName());
 
             TextView reportEng = (TextView) reportCard.findViewById(R.id.tv_english);
-            reportEng.setText(currentReport.getmEnglish());
+            reportEng.setText(currentReport.getmEnglishGrade());
 
-            TextView reportMath = reportCard.findViewById(R.id.tv_math);
-            reportMath.setText(currentReport.getmMath());
+
         }
 
 
         return reportCard;
     }
+
+
 }
