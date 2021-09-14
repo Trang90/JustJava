@@ -2,6 +2,7 @@ package com.example.android.justjava.color;
 
 import android.os.Bundle;
 
+import com.example.android.justjava.R;
 import com.example.android.justjava.Word;
 import com.example.android.justjava.WordsAdapter;
 import com.example.android.justjava.databinding.ActivityNumberBinding;
@@ -28,15 +29,15 @@ public class ColorActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ArrayList<Word> colors = new ArrayList<>();
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
-        colors.add(new Word("red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
+        colors.add(new Word(R.drawable.color_red,"red", "rot"));
 
-        WordsAdapter adapter = new WordsAdapter(this, colors);
+        WordsAdapter adapter = new WordsAdapter(this, colors, R.color.category_colors);
         binding.numberGridView.setAdapter(adapter);
 
 

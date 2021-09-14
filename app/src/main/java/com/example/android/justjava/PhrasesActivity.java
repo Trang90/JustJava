@@ -33,7 +33,7 @@ public class PhrasesActivity extends AppCompatActivity {
         phrase.add(new Word("Hello", "Hallo"));
         phrase.add(new Word("Hello", "Hallo"));
 
-        WordsAdapter adapter = new WordsAdapter(this, phrase);
+        WordsAdapter adapter = new WordsAdapter(this, phrase, R.color.category_phrases);
         binding.numberGridView.setAdapter(adapter);
     }
 }

@@ -23,16 +23,16 @@ public class NumberActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one", "eins"));
-        words.add(new Word("two", "zwei"));
-        words.add(new Word("three", "drei"));
-        words.add(new Word("four", "vier"));
-        words.add(new Word("five", "fuenf"));
-        words.add(new Word("six", "sechs"));
-        words.add(new Word("seven", "sieben"));
-        words.add(new Word("eight", "acht"));
-        words.add(new Word("nine", "neun"));
-        words.add(new Word("ten", "zehn"));
+        words.add(new Word(R.drawable.number_one,"one", "eins"));
+        words.add(new Word(R.drawable.number_one,"two", "zwei"));
+        words.add(new Word(R.drawable.number_one,"three", "drei"));
+        words.add(new Word(R.drawable.number_one,"four", "vier"));
+        words.add(new Word(R.drawable.number_one,"five", "fuenf"));
+        words.add(new Word(R.drawable.number_one,"six", "sechs"));
+        words.add(new Word(R.drawable.number_one,"seven", "sieben"));
+        words.add(new Word(R.drawable.number_one,"eight", "acht"));
+        words.add(new Word(R.drawable.number_one,"nine", "neun"));
+        words.add(new Word(R.drawable.number_one,"ten", "zehn"));
         Log.v("numberActivity", "number at this position is" + words.get(0));
 
 //        int index =0 ;
@@ -49,7 +49,7 @@ public class NumberActivity extends AppCompatActivity {
 //            binding.numberGridView.addView(wordView);
 //        }
 
-        WordsAdapter adapter = new WordsAdapter(this,words);
+        WordsAdapter adapter = new WordsAdapter(this,words, R.color.category_numbers);
         binding.numberGridView.setAdapter(adapter);
 
     }

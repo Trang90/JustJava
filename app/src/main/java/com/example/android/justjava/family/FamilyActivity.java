@@ -2,6 +2,7 @@ package com.example.android.justjava.family;
 
 import android.os.Bundle;
 
+import com.example.android.justjava.R;
 import com.example.android.justjava.Word;
 import com.example.android.justjava.WordsAdapter;
 import com.example.android.justjava.databinding.ActivityNumberBinding;
@@ -28,19 +29,19 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ArrayList<Word> family =new ArrayList<>();
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
-        family.add(new Word("father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
+        family.add(new Word(R.drawable.family_father,"father", "vater"));
 
-        WordsAdapter adapter = new WordsAdapter(this, family);
+        WordsAdapter adapter = new WordsAdapter(this, family, R.color.category_family);
         binding.numberGridView.setAdapter(adapter);
 
     }
