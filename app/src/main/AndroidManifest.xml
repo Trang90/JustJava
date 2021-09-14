@@ -13,6 +13,7 @@
             <data android:scheme="mailto" />
         </intent>
     </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +21,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JustJava">
+        <activity
+            android:name=".NumberActivity"
+            android:label="@string/category_numbers"
+            android:exported="true" />
+        <activity
+            android:name=".PhrasesActivity"
+            android:label="@string/category_phrases"
+            android:exported="true" />
+        <activity
+            android:name=".color.ColorActivity"
+            android:exported="true"
+            android:label="@string/category_colors"
+            android:theme="@style/Theme.JustJava.NoActionBar" />
+        <activity
+            android:name=".family.FamilyActivity"
+            android:exported="true"
+            android:label="@string/category_family"
+            android:theme="@style/Theme.JustJava.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -2,11 +2,26 @@
     <string name="app_name" translatable="false">Just Java</string>
 
 
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_phrases">Phrases</string>
 
-    <string name="name" translatable="false">Name: <xliff:g id="name" example="Amy">%s</xliff:g></string>
-    <string name="add_cream">Add whipped cream? <xliff:g id="addCream" example="true">%b</xliff:g></string>
-    <string name="add_chocolate">Add whipped cream? <xliff:g id="addChocolate" example="true">%b</xliff:g></string>
-    <string name="quantity">Quantity: <xliff:g id="quantity" example="3">%d</xliff:g></string>
-    <string name="total" translatable="false">Total: <xliff:g id="price" example="$3">%s</xliff:g></string>
-    <string name="thanks">Thank you!</string>
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">Colors</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_numbers">Numbers</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_family">Family Members</string>
+    <string name="title_activity_family">FamilyActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_color">ColorActivity</string>
+
 </resources>
