@@ -17,29 +17,17 @@
         android:orientation="vertical"
         android:background="@color/tan_background">
 
-        <TextView
-            android:id="@+id/numbers"
+        <Button
+            android:id="@+id/play"
             style="@style/CategoryStyle"
-            android:background="@color/category_numbers"
-            android:text="@string/category_numbers" />
+            android:text="Play" />
 
-        <TextView
-            android:id="@+id/family"
+        <Button
+            android:id="@+id/pause"
             style="@style/CategoryStyle"
-            android:background="@color/category_family"
-            android:text="@string/category_family" />
+            android:text="Pause" />
 
-        <TextView
-            android:id="@+id/colors"
-            style="@style/CategoryStyle"
-            android:background="@color/category_colors"
-            android:text="@string/category_colors" />
 
-        <TextView
-            android:id="@+id/phrases"
-            style="@style/CategoryStyle"
-            android:background="@color/category_phrases"
-            android:text="@string/category_phrases" />
 
     </LinearLayout>
 

@@ -3,6 +3,7 @@ package com.example.android.justjava;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -18,58 +19,33 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.hange);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.numbers.setOnClickListener(new View.OnClickListener() {
+        binding.play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), NumberActivity.class);
-                startActivity(intent);
+                mediaPlayer.start();
             }
         });
 
-        binding.colors.setOnClickListener(new View.OnClickListener(){
+        binding.pause.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(), ColorActivity.class);
-                startActivity(intent);
+                mediaPlayer.stop();
             }
         });
 
-        binding.family.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), FamilyActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        binding.phrases.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), PhrasesActivity.class);
-                startActivity(intent);
-            }
-        });
-            }
-
-//    public void openNumberLists (View view) {
-//
-//        Intent intent = new Intent(this, NumberActivity.class);
-//        startActivity(intent);
-//
-//    }
-
+    }
 }
 
 
