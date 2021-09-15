@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:minHeight="@dimen/list_item_height"
-        android:background="@color/tan_background"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:background="@color/tan_background"
+            android:minHeight="@dimen/list_item_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <ImageView
@@ -23,36 +24,51 @@
                 android:background="@color/tan_background"
                 android:src="@mipmap/ic_launcher" />
 
-    <LinearLayout
-        android:id="@+id/text_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/category_numbers">
 
-            <TextView
-                android:id="@+id/miwok_tv"
+            <RelativeLayout
+                android:id="@+id/text_container"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:gravity="bottom"
-                tools:text="eins"
-                android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/white"/>
+                android:layout_height="@dimen/list_item_height"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/iv_image"
+                android:background="@color/category_numbers"
+                android:orientation="vertical"
 
-            <TextView
-                android:id="@+id/defaut_tv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="top"
-                android:layout_marginStart="16dp"
-                tools:text="one"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
-    </LinearLayout>
+                android:paddingStart="16dp">
 
+                <TextView
+                    android:id="@+id/miwok_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="bottom"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:text="eins" />
+
+                <TextView
+                    android:id="@+id/defaut_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_below="@id/miwok_tv"
+                    android:gravity="top"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    tools:text="one" />
+            </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/play_icon" />
+
+</RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
