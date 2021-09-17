@@ -3,16 +3,16 @@
 
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <string name="category_restaurant">Restaurants</string>
 
     <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
+    <string name="category_monument">Historical Monument</string>
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_numbers">Numbers</string>
+    <string name="category_city">Cities</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family Members</string>
+    <string name="category_park">National park</string>
     <string name="title_activity_family">FamilyActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -23,5 +23,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_color">ColorActivity</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="near_the">Near the</string>
 </resources>
