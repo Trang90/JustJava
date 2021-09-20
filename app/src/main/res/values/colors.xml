@@ -72,4 +72,9 @@
 
     <!-- Text color for the primary location of the earthquake in the list item -->
     <color name="textColorEarthquakeLocation">#2B3D4D</color>
+
+    <color name="textColorAuthor">#606060</color>
+    <color name="textColorBookTitle">#000000</color>
+    <color name="textColorCountryCode">#606060</color>
+    <color name="textColorPrice">#ba0b0b</color>
 </resources>

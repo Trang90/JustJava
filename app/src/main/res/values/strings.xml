@@ -50,9 +50,15 @@
     <string name="perceived_strength">Perceived Strength</string>
 
     <!-- Number of people who reported perceived strength for an earthquake [CHAR LIMIT=NONE] -->
-    <string name="num_people_felt_it"><xliff:g id="number" example="10">%s</xliff:g> people felt it</string>
+    <string name="num_people_felt_it"><xliff:g example="10" id="number">%s</xliff:g> people felt it</string>
 
     <string name="no_earthquakes">No earthquakes found.</string>
 
     <string name="no_internet_connection">No internet connection.</string>
+
+
+    <string name="search_button_name">search</string>
+    <string name="no_books">No books found.</string>
+    <string name="search_view_hint">Enter a book title</string>
+    <string name="search_hint">Enter a title</string>
 </resources>

@@ -1,62 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/margin_16_dp"
+    android:paddingLeft="@dimen/margin_16_dp"
+    android:paddingRight="@dimen/margin_16_dp"
+    android:paddingStart="@dimen/margin_16_dp">
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/list_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/magnitude_circle"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                tools:text="8.9"
-                android:id="@+id/number"/>
+    <ImageView
+        android:id="@+id/cover_image"
+        android:layout_width="@dimen/image_view_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        tools:src="@mipmap/ic_launcher" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_16_dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="30km S of"
-                android:id="@+id/location"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="@color/textColorEarthquakeDetails"
-                android:textAllCaps="true"
-                android:textSize="12sp"
-                android:fontFamily="sans-serif-medium"/>
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorAuthor"
+            android:textSize="@dimen/author_text_size"
+            tools:text="J.K. Rowling" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:textColor="@color/textColorEarthquakeLocation"
-                android:textSize="16sp"
-                tools:text="Long placeholder location that should wrap to more than 2 lines of text"
-                android:id="@+id/city"/>
+        <TextView
+            android:id="@+id/book_title"
+            android:elegantTextHeight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:textColor="@color/textColorBookTitle"
+            android:textSize="@dimen/title_text_size"
+            tools:text="Harry Potter" />
 
     </LinearLayout>
 
@@ -64,94 +55,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_16_dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorCountryCode"
+            android:textSize="@dimen/language_code_text_size"
+            tools:text="Euro" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <TextView
+                android:id="@+id/book_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                tools:text="Mar 6, 2010"
-                android:textColor="@color/textColorEarthquakeDetails"
-                android:textSize="12sp"
-                android:id="@+id/date"/>
+                android:textColor="@color/textColorPrice"
+                android:textSize="@dimen/language_code_text_size"
+                android:textStyle="bold"
+                tools:text="39.99" />
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/currency_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textColor="@color/textColorEarthquakeDetails"
-                android:textSize="12sp"
-                tools:text="3:00 PM" />
+                android:layout_marginStart="@dimen/margin_8_dp"
+                android:textColor="@color/textColorPrice"
+                android:textSize="@dimen/language_code_text_size"
+                android:textStyle="bold"
+                tools:text="EUR" />
+
         </LinearLayout>
-        </LinearLayout>
 
 
-
-
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="@dimen/list_item_height"-->
-<!--            android:background="@color/tan_background"-->
-<!--            android:minHeight="@dimen/list_item_height"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-
-<!--            <ImageView-->
-<!--                android:id="@+id/iv_image"-->
-<!--                android:layout_width="@dimen/list_item_height"-->
-<!--                android:layout_height="@dimen/list_item_height"-->
-<!--                android:background="@color/tan_background"-->
-<!--                android:src="@mipmap/ic_launcher" />-->
-
-
-<!--            <RelativeLayout-->
-<!--                android:id="@+id/text_container"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="@dimen/list_item_height"-->
-<!--                android:layout_alignParentTop="true"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:layout_toEndOf="@id/iv_image"-->
-<!--                android:background="@color/category_numbers"-->
-<!--                android:orientation="vertical"-->
-
-<!--                android:paddingStart="16dp">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/miwok_tv"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="44dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:gravity="bottom"-->
-<!--                    android:textAppearance="?android:textAppearanceMedium"-->
-<!--                    android:textColor="@android:color/white"-->
-<!--                    android:textStyle="bold"-->
-<!--                    tools:text="eins" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/defaut_tv"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="44dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_below="@id/miwok_tv"-->
-<!--                    android:gravity="top"-->
-<!--                    android:textAppearance="?android:textAppearanceMedium"-->
-<!--                    android:textColor="@android:color/white"-->
-<!--                    tools:text="one" />-->
-<!--            </RelativeLayout>-->
-
-
-<!--    <ImageView-->
-<!--        android:layout_width="24dp"-->
-<!--        android:layout_height="24dp"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:src="@drawable/play_icon" />-->
-
-<!--</RelativeLayout>-->
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
