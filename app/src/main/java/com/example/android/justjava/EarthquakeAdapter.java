@@ -1,6 +1,5 @@
 package com.example.android.justjava;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
@@ -12,11 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -71,7 +68,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
                 String[] part = wholeLocation.split(LOCATION_SEPARATOR);
                 locationOffset = part[0] + LOCATION_SEPARATOR;
                 cityName = part[1];
-            //nếu ko có thì dùng từ "near the"
+                //nếu ko có thì dùng từ "near the"
             } else {
                 locationOffset = getContext().getString(R.string.near_the);
                 cityName = wholeLocation;

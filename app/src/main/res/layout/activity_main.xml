@@ -6,52 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/header_event"
-            android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceSmall" />
-
-        <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceLarge" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:paddingTop="16dp"
-            android:text="@string/header_date"
-            android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
             android:textAppearance="?android:textAppearanceLarge" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:paddingTop="16dp"
-            android:text="@string/header_tsunami_alert"
+            android:paddingBottom="16dp"
+            android:text="@string/perceived_strength"
             android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceSmall" />
+            android:textAppearance="?android:textAppearanceMedium" />
 
         <TextView
-            android:id="@+id/tsunami_alert"
+            android:id="@+id/perceived_magnitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceLarge" />
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/magnitude_circle"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/number_of_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceMedium" />
 
     </LinearLayout>
 

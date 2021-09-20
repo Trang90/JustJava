@@ -5,23 +5,23 @@ public class Event {
     /** Title of the earthquake event */
     public final String title;
 
-    /** Time that the earthquake happened (in milliseconds) */
-    public final long time;
+    /** Number of people who felt the earthquake and reported how strong it was */
+    public final String numOfPeople;
 
-    /** Whether or not a tsunami alert was issued (1 if it was issued, 0 if no alert was issued) */
-    public final int tsunamiAlert;
+    /** Perceived strength of the earthquake from the people's responses */
+    public final String perceivedStrength;
 
     /**
      * Constructs a new {@link Event}.
      *
      * @param eventTitle is the title of the earthquake event
-     * @param eventTime is the time the earhtquake happened
-     * @param eventTsunamiAlert is whether or not a tsunami alert was issued
+     * @param eventNumOfPeople is the number of people who felt the earthquake and reported how
+     *                         strong it was
+     * @param eventPerceivedStrength is the perceived strength of the earthquake from the responses
      */
-    public Event(String eventTitle, long eventTime, int eventTsunamiAlert) {
+    public Event(String eventTitle, String eventNumOfPeople, String eventPerceivedStrength) {
         title = eventTitle;
-        time = eventTime;
-        tsunamiAlert = eventTsunamiAlert;
+        numOfPeople = eventNumOfPeople;
+        perceivedStrength = eventPerceivedStrength;
     }
 }
-
